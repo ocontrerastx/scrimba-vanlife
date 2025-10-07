@@ -144,3 +144,54 @@ header a:hover {
   color: white;
   border-radius: 10px;
 }
+
+/*** VANS PAGE ***/
+.van-page-content {
+  width: 100%;
+  padding: 16px;
+}
+
+.van-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 24px;
+}
+
+.van-card {
+  max-width: 500px;
+}
+
+.van-card img {
+  width: 100%;
+
+  border-radius: 5px;
+}
+
+.van-card h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #161616;
+}
+
+.van-info {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.van-price-daily {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+}
+
+.van-type {
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 6px 12px;
+  background-color: #e17654;
+  border-radius: 5px;
+  color: #ffead0;
+}

@@ -16,7 +16,7 @@ export default function Vans() {
         <div className="van-info">
           <div className="van-title-type">
             <h2 className="van-name">{van.name}</h2>
-            <p className="van-type">{van.type}</p>
+            <p className={`van-type ${van.type}`}>{van.type}</p>
           </div>
           <h2 className="van-price">
             ${van.price}

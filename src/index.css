@@ -195,3 +195,15 @@ header a:hover {
   border-radius: 5px;
   color: #ffead0;
 }
+
+.van-type.simple {
+  background-color: #e17654;
+}
+
+.van-type.rugged {
+  background-color: #115e59;
+}
+
+.van-type.luxury {
+  background-color: #161616;
+}

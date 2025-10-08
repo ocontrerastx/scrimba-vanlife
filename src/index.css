@@ -161,6 +161,10 @@ header a:hover {
   max-width: 500px;
 }
 
+.van-card a {
+  text-decoration: none;
+}
+
 .van-card img {
   width: 100%;
 

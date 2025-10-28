@@ -19,7 +19,7 @@ export default function Vans() {
       return (
         <div key={van.id} className="van-card">
           <Link
-            to={`/vans/${van.id}`}
+            to={`${van.id}`}
             aria-label={`View details for ${van.name}, 
                              priced at $${van.price} per day`}
           >
@@ -39,22 +39,53 @@ export default function Vans() {
       );
     });
 
+  function handleFilterChange(key, value) {
+    setSearchParams((prevParams) => {
+      if (value === null) {
+        prevParams.delete(key);
+      } else {
+        prevParams.set(key, value);
+      }
+      return prevParams;
+    });
+  }
+
   return (
     <div className="van-page-content">
       <h1>Explore our van options</h1>
       <div className="van-list-filter-buttons">
-        <Link className="van-type simple" to="?type=simple">
+        <button
+          onClick={() => handleFilterChange("type", "simple")}
+          className={`van-type simple ${
+            typeFilter === "simple" ? "selected" : ""
+          }`}
+        >
           Simple
-        </Link>
-        <Link className="van-type luxury" to="?type=luxury">
+        </button>
+        <button
+          onClick={() => handleFilterChange("type", "luxury")}
+          className={`van-type luxury ${
+            typeFilter === "luxury" ? "selected" : ""
+          }`}
+        >
           Luxury
-        </Link>
-        <Link className="van-type rugged" to="?type=rugged">
+        </button>
+        <button
+          onClick={() => handleFilterChange("type", "rugged")}
+          className={`van-type rugged ${
+            typeFilter === "rugged" ? "selected" : ""
+          }`}
+        >
           Rugged
-        </Link>
-        <Link className="van-type clear-filters" to=".">
-          Clear Filter
-        </Link>
+        </button>
+        {typeFilter && (
+          <button
+            onClick={() => handleFilterChange("type", null)}
+            className="van-type clear-filters"
+          >
+            Clear filter
+          </button>
+        )}
       </div>
       <div className="van-list">{vanElements}</div>
     </div>

@@ -10,12 +10,7 @@ import {
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB6Mz6rJeqQg2XpTyWkxIg6PWVVwyLwVCo",
-  authDomain: "vanlife-8d2a0.firebaseapp.com",
-  projectId: "vanlife-8d2a0",
-  storageBucket: "vanlife-8d2a0.firebasestorage.app",
-  messagingSenderId: "313750486669",
-  appId: "1:313750486669:web:6898342a4b8ad7b3feacc4",
+  // Your config here
 };
 
 const app = initializeApp(firebaseConfig);

@@ -58,6 +58,16 @@ header a:hover {
   text-decoration: underline;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav img {
+  display: flex;
+}
+
 i {
   font-style: normal;
 }
@@ -490,6 +500,7 @@ i[class*="van-type"] {
   margin-top: 22px;
   color: white;
   font-family: "Inter", sans-serif;
+  cursor: pointer;
 }
 
 .login-error {
